@@ -8,14 +8,9 @@ import 'widgets/item_card.dart';
 import 'widgets/search_row.dart';
 import 'widgets/see_all.dart';
 
-class HomePageDetails extends StatefulWidget {
-  const HomePageDetails({super.key});
+class HomePageDetails extends StatelessWidget {
+   HomePageDetails({super.key});
 
-  @override
-  State<HomePageDetails> createState() => _HomePageDetailsState();
-}
-
-class _HomePageDetailsState extends State<HomePageDetails> {
   List<String> categories = [
     'assets/icons/categories/tshirt.png',
     'assets/icons/categories/games.png',
@@ -24,6 +19,7 @@ class _HomePageDetailsState extends State<HomePageDetails> {
     'assets/icons/categories/games.png',
     'assets/icons/categories/tshirt.png',
   ];
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

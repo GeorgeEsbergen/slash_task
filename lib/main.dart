@@ -1,6 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:slash_task/features/homepage/presentation/view/home_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'features/homepage/presentation/cubit/bottomnav_cubit.dart';
+import 'features/homepage/presentation/view/bottomnavbar.dart';
 
 void main() {
   
@@ -14,7 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Slash Task',
@@ -23,7 +25,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage()
+      home: BlocProvider(
+        create: (_) => NavigationCubit(),
+        child: const HomeScreen(),
+      ),
     );
   }
 }
