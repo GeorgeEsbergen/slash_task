@@ -2,7 +2,14 @@
 
 A new Flutter project.
 
-## Getting Started
+## How to Setup project
+first way
+1- copy repo path
+2- open git bash
+3- write git clone repo-path
+
+second way
+dawnload zip file and extract it 
 
 This project is a starting point for a Flutter application.
 
